@@ -45,10 +45,10 @@ table {
 
 td,th {
     text-align: center;
-    background-color: #00000005;
+    background-color: #f3f4f0;
 }
 th {
-    padding: 3px;
+    padding: 12px;
 }
 tr:first-child th {
     font-size: 20px;
@@ -61,10 +61,10 @@ td:last-child, th:last-child {
 }
 
 th {
-    border-top: 1px solid rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(0,0,0,0);
     border-right: 1px solid rgba(0,0,0,0);
-    background-color: #e7f3f8;
-    color: #00000090;
+    background-color: #bcaaa4;
+    color: #fff;
     text-shadow: 0px -1px 0px rgba(0,0,0,0);
     font-weight: bold;
 }
@@ -73,7 +73,7 @@ th .any {
     font-weight: normal;
     display: block;
     text-shadow: none;
-    color: rgba(0,0,0,0.4);
+    color: rgba(255,255,255,255);
 }
 tr:nth-child(2) th {
     padding: 5px;
@@ -99,9 +99,9 @@ td:nth-child(6)>span {
 }
 td.avui>span {
     font-weight: bold;
-    background-color: #e7f3f8;
-    color: #black;
-    border: 2px solid rgba(0,0,0,0.1);
+    background-color: #bcaaa4;
+    color: #fff;
+    border: 0px solid rgba(0,0,0,0.1);
 }
 td.fora > span {
     opacity: 0.2;
@@ -180,13 +180,13 @@ var dies = [
 ];
 
 var dies_abr = [
-    'Su',
-    'Mo',
-    'Tu',
-    'We',
-    'Th',
-    'Fr',
-    'Sa'
+    'S',
+    'M',
+    'T',
+    'W',
+    'T',
+    'F',
+    'S'
 ];
 
 Number.prototype.pad = function(num) {
@@ -241,7 +241,7 @@ function calendari(widget, data)
 
     titol.appendChild(boto_prev);
     titol.appendChild(document.createElement('span')).innerHTML = 
-        mesos[data.getMonth()] + '<span class="any">' + data.getFullYear() + '</span>';
+        mesos[data.getMonth()] + ' ' + data.getFullYear() + '</span>';
 
     titol.appendChild(boto_next);
 
