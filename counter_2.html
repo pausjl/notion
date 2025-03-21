@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- original:https://codepen.io/namantaneja167/pen/KKaGVBK -->
+<html lang="en">
+<head>
+<div class="frame">
+   <div class="center">
+		 <div class ="component">
+			<div id="title">books i&#x27;ve read</div>
+		  <div id="minus">–</div>
+      <div id="counter">0</div>
+      <div id="plus">+</div>
+		</div>
+   </div>
+  </div>
+    <title>Counter</title>
+
+    <style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border-radius: 2px;
+	overflow: hidden;
+  background: transparent;
+  color: #333;
+	font-family: 'Roboto', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.component{
+	border: 0px solid black;
+	padding:10px;
+	border-radius:10px;
+	
+}
+#plus,#minus{
+			cursor:pointer;
+			width:18px;
+			height:18px;
+      position: relative;
+			background:#F0F0F0;
+			border-radius:4px;
+			padding:3px 3px 3px 3px;
+			border:0px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      font-family: sans-serif;
+      color: #AEAEAE;
+}
+#counter{
+	padding:15px;
+	font-size:16px;
+	font-weight:bold;
+	display: inline;
+	background: transparent;
+	border-radius:4px;
+	padding:3px 5px 3px 5px;
+	border:0px solid #ddd;
+}
+ #title{
+      text-align: center;
+			font-family: 'Roboto';
+      font-weight: bold;
+      font-size: 17px;
+      color: #37352F;
+	 		padding:0px 0px 20px 0px ;
+      }
+    </style>
+</head>
+<body>
+      <div class="">
+        <div id="frame"></div>
+      </div>
+    <script>
+let plus = document.getElementById('plus');
+let minus = document.getElementById('minus');
+let counter = document.getElementById("counter");
+let count = 0;
+console.log("hello world")
+plus.addEventListener("click",()=>{
+  count++;
+  counter.innerHTML=count;
+  console.log("plus");
+})
+
+minus.addEventListener("click",()=>{
+  count--;
+  counter.innerHTML=count;
+  console.log("minus");
+})
+    </script>
+</body>
+</html>
